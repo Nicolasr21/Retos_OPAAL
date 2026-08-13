@@ -1,0 +1,23 @@
+
+.unit-grid{
+  width:min(1220px,100%);margin:auto;padding:0 24px 60px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+.unit-card{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:23px;
+  text-decoration:none;box-shadow:0 7px 22px rgba(13,59,110,.07);
+  transition:.22s;color:var(--ink);position:relative;overflow:hidden;
+}
+.unit-card:before{
+  content:"";position:absolute;left:0;top:0;width:5px;height:100%;
+  background:var(--blue);
+}
+.unit-card:nth-child(3n+2):before{background:var(--green)}
+.unit-card:nth-child(3n):before{background:var(--orange)}
+.unit-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.unit-card span{font:700 10px 'Roboto Mono';color:var(--blue)}
+.unit-card h2{color:var(--navy);font-size:19px;margin:9px 0}
+.unit-card p{font-size:11px;line-height:1.65;color:#63727e;min-height:43px}
+.unit-card b{font-size:10.5px;color:var(--green)}
+@media(max-width:850px){.unit-grid{grid-template-columns:repeat(2,1fr);padding-left:16px;padding-right:16px}}
+@media(max-width:560px){.unit-grid{grid-template-columns:1fr}}

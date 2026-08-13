@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Banco interactivo de situaciones problema - Unidad 8: Filtro pasa bajas.">
+<title>Unidad 8 · Filtro pasa bajas | OPA²L</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-unit="pasabajas">
+<div class="topline"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Inicio OPA²L">
+      <div class="logo-mark">OPA<sup>2</sup>L</div>
+    </a>
+    <nav aria-label="Navegación por unidades">
+      <a href="index.html">Inicio</a>
+<a href="seguidor.html">Unidad 1</a>
+<a href="comparador.html">Unidad 2</a>
+<a href="inversor.html">Unidad 3</a>
+<a href="noinversor.html">Unidad 4</a>
+<a href="sumador.html">Unidad 5</a>
+<a href="integrador.html">Unidad 6</a>
+<a href="derivador.html">Unidad 7</a>
+<a href="pasabajas.html" class="active">Unidad 8</a>
+<a href="pasaaltas.html">Unidad 9</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero">
+  <h1>Unidad 8 · Filtro pasa bajas</h1>
+  <p>Conservación de la banda útil y atenuación de componentes de frecuencia superior. En esta sección encontrarás diez problemáticas contextualizadas en situaciones de aplicación. Cada reto está diseñado para resolverse utilizando la configuración correspondiente a esta unidad, siguiendo el proceso de análisis, diseño, simulación e implementación.</p>
+  
+</section>
+<div class="container">
+<section class="controls" aria-label="Selector de situaciones problema">
+  <div class="controls-head">
+    <div>
+      <h2>Selecciona una situación problema</h2>
+      <p>Elige un reto específico o genera uno aleatoriamente.</p>
+    </div>
+  </div>
+  <div class="challenge-selector" id="challengeSelector"></div>
+  <div class="actions">
+    <button class="primary" id="randomChallenge" type="button">↻ Generar reto aleatorio</button>
+    <button class="secondary" id="allChallenges" type="button">▦ Ver banco completo</button>
+  </div>
+</section>
+
+<article class="challenge-card" id="challengeCard">
+  <div class="challenge-top">
+    <div class="challenge-number" id="challengeNumber"></div>
+    <h2 id="challengeTitle"></h2>
+  </div>
+  <div class="challenge-body">
+    <section>
+      <h3>Situación problema</h3>
+      <p id="challengeSituation"></p>
+    </section>
+    <section>
+      <h3>Datos del reto</h3>
+      <p class="data" id="challengeData"></p>
+    </section>
+    <section>
+      <h3>Actividades propuestas</h3>
+      <ol class="activities" id="challengeActivities"></ol>
+    </section>
+  </div>
+</article>
+
+<section class="workflow" aria-label="Ruta de trabajo sugerida">
+  <article class="step"><b>01 · ANALIZA</b><p>Identifica el problema, las variables involucradas y las condiciones de funcionamiento.</p></article>
+  <article class="step"><b>02 · DISEÑA</b><p>Realiza los cálculos y selecciona los componentes necesarios para la configuración de la unidad.</p></article>
+  <article class="step"><b>03 · SIMULA</b><p>Construye el circuito en LTspice y verifica si el comportamiento coincide con la predicción.</p></article>
+  <article class="step"><b>04 · VERIFICA</b><p>Implementa el circuito en OPA²L, registra resultados y compara teoría, simulación y práctica.</p></article>
+</section>
+</div>
+</main>
+
+<footer>Guía didáctica para el aprendizaje de amplificadores operacionales · Banco de retos adicionales · OPA²L</footer>
+
+<dialog id="bankModal">
+  <div class="modal-head">
+    <h2>Banco completo · Unidad 8</h2>
+    <button id="closeModal" aria-label="Cerrar">×</button>
+  </div>
+  <div class="bank-grid" id="bankContent"></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
